@@ -6,5 +6,7 @@ page,view,text,swiper,swiper-item,image,navigator{
   box-sizing: border-box;
 }
 page{
+  /* 定义出题颜色、字体大小 */
   --themeColor:#eb4500;
+  font-size: 28rpx;
 }

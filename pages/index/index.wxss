@@ -1,3 +1,52 @@
-view{
+/* view{
     color: var(--themeColor);
+} */
+.container .swiper_list {
+  width: 100%;
+}
+.container .swiper_list swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.container .swiper_list swiper image {
+  width: 100%;
+}
+.container .cate_list {
+  width: 100%;
+  display: flex;
+  margin-top: 15rpx;
+}
+.container .cate_list navigator {
+  flex: 1;
+}
+.container .cate_list navigator image {
+  width: 100%;
+}
+.container .floor {
+  width: 100%;
+}
+.container .floor .floor_list {
+  overflow: hidden;
+}
+.container .floor .floor_list .floor_title {
+  padding: 10rpx 0;
+}
+.container .floor .floor_list .floor_title image {
+  width: 100%;
+}
+.container .floor .floor_list .floor_cont navigator {
+  float: left;
+  width: 33.33%;
+}
+.container .floor .floor_list .floor_cont navigator:nth-last-child(-n+4) {
+  height: 27.72711207vw;
+  border-left: 10rpx solid #fff;
+}
+.container .floor .floor_list .floor_cont navigator:nth-child(2),
+.container .floor .floor_list .floor_cont navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.container .floor .floor_list .floor_cont navigator image {
+  width: 100%;
+  height: 100%;
 }

@@ -1,66 +1,46 @@
-// pages/index/index.js
+import request from '../../request/network.js'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    swiperList: [], // 轮播图数据
+    cateList: [], // 导航分类的数据
+    floorData: [], // 楼层数据
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    this.getSwiperList()
+    this.getCateList()
+    this.getFloorData()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 获取轮播图数据
+  getSwiperList () {
+    request({
+      url: 'home/swiperdata'
+    }).then(result => {
+      const resData = result.data
+      this.setData({
+        swiperList: resData.message
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 获取导航数据
+  getCateList () {
+    request({
+      url: 'home/catitems'
+    }).then(result => {
+      const resData = result.data
+      this.setData({
+        cateList: resData.message
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 获取楼层数据
+  getFloorData () {
+    request({
+      url: 'home/floordata'
+    }).then(result => {
+      const resData = result.data
+      this.setData({
+        floorData: resData.message
+      })
+    })
   }
 })
