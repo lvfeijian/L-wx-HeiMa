@@ -1,2 +1,11 @@
-<!--pages/good_list/index.wxml-->
-<text>pages/good_list/index.wxml</text>
+<SearchInput></SearchInput>
+<Tabs binddoSwitchTab="doSwitchTab" tabs="{{tabs}}"></Tabs>
+<view wx:if="{{tabs[0].isActive}}">
+    1
+</view>
+<view wx:elif="{{tabs[1].isActive}}">
+    2
+</view>
+<view wx:if="{{tabs[2].isActive}}">
+    3
+</view>

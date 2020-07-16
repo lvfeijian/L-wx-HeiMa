@@ -11,36 +11,27 @@ Page({
     this.getFloorData()
   },
   // 获取轮播图数据
-  getSwiperList () {
-    request({
-      url: 'home/swiperdata'
-    }).then(result => {
-      const resData = result.data
-      this.setData({
-        swiperList: resData.message
-      })
+  async getSwiperList () {
+    const result = await request({url: 'home/swiperdata'})
+    const resData = result.data
+    this.setData({
+      swiperList: resData.message
     })
   },
   // 获取导航数据
-  getCateList () {
-    request({
-      url: 'home/catitems'
-    }).then(result => {
-      const resData = result.data
-      this.setData({
-        cateList: resData.message
-      })
+  async getCateList () {
+    const result = await request({url: 'home/catitems'})
+    const resData = result.data
+    this.setData({
+      cateList: resData.message
     })
   },
   // 获取楼层数据
-  getFloorData () {
-    request({
-      url: 'home/floordata'
-    }).then(result => {
-      const resData = result.data
-      this.setData({
-        floorData: resData.message
-      })
+  async getFloorData () {
+    const result = await request({url: 'home/floordata'})
+    const resData = result.data
+    this.setData({
+      floorData: resData.message
     })
   }
 })

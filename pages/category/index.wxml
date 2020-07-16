@@ -1,2 +1,26 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view class="category">
+    <SearchInput></SearchInput>
+    <view class="context">
+        <scroll-view class="left" scroll-y>
+            <view class="left_list {{index == currentIndex ? 'active' : ''}}" wx:for="{{category}}" wx:key="cat_id" bindtap="switchCategory" id="{{index}}">
+                {{item}}
+            </view>
+        </scroll-view>
+        <scroll-view class="right" scroll-y scroll-top="{{scrollTop}}">
+            <view class="right_list" wx:for="{{category_right}}" wx:key="cat_id">
+                <view class="text">
+                    /{{item.cat_name}}/
+                </view>
+                <view class="cont">
+                    <navigator class="cont_text" wx:for="{{item.children}}" wx:key="cat_id" wx:for-item="item2" url="/pages/good_list/index?cid={{item2.cat_id}}">
+                        <view class="text">
+                            {{item.cat_name}}
+                        </view>
+                        <image class="" src="{{item.cat_icon}}" mode="widthFix" lazy-load="false"></image>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    
+</view>
