@@ -66,9 +66,9 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/good_list/index",
-					"pathName": "pages/good_list/index",
-					"query": "cid=5",
+					"name": "商品详情页",
+					"pathName": "pages/goods_detail/index",
+					"query": "goods_list= 43986",
 					"scene": null
 				}
 			]

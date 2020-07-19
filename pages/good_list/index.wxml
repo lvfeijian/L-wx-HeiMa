@@ -1,7 +1,19 @@
 <SearchInput></SearchInput>
 <Tabs binddoSwitchTab="doSwitchTab" tabs="{{tabs}}"></Tabs>
 <view wx:if="{{tabs[0].isActive}}">
-    1
+    <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="shop_list" wx:for="{{goodsList}}" wx:key="index">
+        <image class="shop_list_pic" src="{{item.goods_small_logo || 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595006385832&di=181be597fd21c0eb2aed1b5163209f58&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F348d78256f8f810af1291d357c8aa233a0b6a1f64b0b8-C6KJIS_fw658'}}" mode="widthFix" lazy-load="false"></image>
+        <view class="shop_list_cont">
+            <view class="shop_list_text">
+                {{item.goods_name}}
+            </view>
+            <view class="shop_list_price">
+                ￥{{item.goods_price}}
+            </view>
+        </view>
+        {{item}}
+    </navigator>
+    
 </view>
 <view wx:elif="{{tabs[1].isActive}}">
     2

@@ -1,1 +1,26 @@
-/* pages/good_list/index.wxss */
+.shop_list {
+  display: flex;
+  border-bottom: 1px solid #f00;
+}
+.shop_list .shop_list_pic {
+  flex: 2;
+}
+.shop_list .shop_list_cont {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.shop_list .shop_list_cont .shop_list_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+  padding: 0 15rpx;
+}
+.shop_list .shop_list_cont .shop_list_price {
+  font-size: 40rpx;
+  color: #eb4450;
+}

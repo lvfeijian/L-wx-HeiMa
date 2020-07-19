@@ -1,0 +1,26 @@
+.shop_list{
+    display: flex;
+    border-bottom: 1px solid #f00;
+    .shop_list_pic{
+        flex: 2;
+    }
+    .shop_list_cont{
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .shop_list_text{
+            overflow:hidden;
+            text-overflow: ellipsis;
+            display:-webkit-box;
+            -webkit-line-clamp:2;//块元素显示的文本行数
+            -webkit-box-orient:vertical;
+            font-size: 30rpx;
+            padding: 0 15rpx;
+        }
+        .shop_list_price{
+            font-size: 40rpx;
+            color: rgba(235, 68, 80, 1);
+        }
+    }
+}
