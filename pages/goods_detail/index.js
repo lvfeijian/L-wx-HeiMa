@@ -36,5 +36,25 @@ Page({
       current: res[currentImg],
       urls: res,
     })
+  },
+  // 加入购物车
+  handleCartAdd () {
+    let cart = wx.getStorageSync("cart") || []
+    let index = cart.findIndex(v => {
+      return v.goods_id == this.data.goodsDetail.goods_id
+    })
+    if (index == -1) {
+      this.data.goodsDetail.num = 1
+      this.data.goodsDetail.checked = false
+      cart.push(this.data.goodsDetail)
+    } else {
+      cart[index].num++
+    }
+    wx.setStorageSync('cart', cart)
+    wx.showToast({ // 弹框
+      title: '加入成功',
+      icon: 'success',
+      mask: true
+    });
   }
 })

@@ -1,1 +1,85 @@
-/* pages/pay/index.wxss */
+.address_container {
+  border-bottom: 1px solid #ccc;
+}
+.address_container .address_info {
+  display: flex;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.address_container .address_info .people {
+  flex: 1;
+}
+.address_container .address_info .tel {
+  margin-right: 20rpx;
+}
+.address_container .address {
+  margin-left: 20rpx;
+}
+.shopCart .title {
+  padding: 15rpx;
+  font-size: 40rpx;
+  color: #767676;
+  border-bottom: 1px solid #ccc;
+}
+.shopCart .shop {
+  display: flex;
+}
+.shopCart .shop .img {
+  flex: 2;
+}
+.shopCart .shop .img image {
+  width: 80%;
+}
+.shopCart .shop .info {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shopCart .shop .info .info.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.shopCart .shop .info .price_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.shopCart .shop .info .price_wrap .price {
+  color: #c00;
+}
+.shopCart .shop .info .price_wrap .num_wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10rpx;
+}
+.shopCart .shop .info .price_wrap .num_wrap .num {
+  padding: 0 10rpx;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bottom .total_price {
+  display: flex;
+  align-items: center;
+}
+.bottom .total_price .total_num {
+  font-size: 40rpx;
+  color: #e00;
+  margin-right: 10rpx;
+}
+.bottom .settlement {
+  padding: 10rpx 20rpx;
+  background-color: #e00;
+  color: #fff;
+}

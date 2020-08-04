@@ -1,10 +1,55 @@
-.container {
+.detail {
+  padding-bottom: 94rpx;
+}
+.detail .container {
   height: auto;
 }
-.container swiper {
+.detail .container swiper {
   height: 60vw;
   text-align: center;
 }
-.container swiper image {
+.detail .container swiper image {
   width: 60vw;
+}
+.bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  height: 94rpx;
+}
+.bottom .btn {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+}
+.bottom .btn button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.bottom .service {
+  flex: 1.5;
+}
+.bottom .share {
+  flex: 1;
+}
+.bottom .shop_cart {
+  flex: 1;
+}
+.bottom .add_cart {
+  flex: 2;
+  background-color: #ffa200;
+  color: #fff;
+}
+.bottom .shop {
+  flex: 2;
+  background-color: #fb5351;
+  color: #fff;
 }

@@ -1,2 +1,6 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="saoma" bindtap="saoma">
+    点我扫一扫
+</view>
+<view class="show">
+    {{show}}
+</view>

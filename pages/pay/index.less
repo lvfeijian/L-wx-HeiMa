@@ -1,0 +1,87 @@
+.address_container{
+    border-bottom: 1px solid #ccc;
+    .address_info{
+        display: flex;
+        margin-left: 20rpx;
+        margin-top: 10rpx;
+        .people{
+            flex: 1;
+        }
+        .tel{
+            margin-right: 20rpx;
+        }
+    }
+    .address{
+        margin-left: 20rpx;
+    }
+}
+.shopCart{
+    .title{
+        padding: 15rpx;
+        font-size: 40rpx;
+        color: #767676;
+        border-bottom: 1px solid #ccc;
+    }
+    .shop{
+        display: flex;
+        .img{
+            flex: 2;
+            image{
+                width: 80%;
+            }
+        }
+        .info{
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .info.text{
+                overflow:hidden;
+                text-overflow: ellipsis;
+                display:-webkit-box;
+                -webkit-line-clamp:2;//块元素显示的文本行数
+                -webkit-box-orient:vertical;
+            }
+            .price_wrap{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .price{
+                    color: #c00;
+                }
+                .num_wrap{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-right: 10rpx;
+                    .num{
+                        padding: 0 10rpx;
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .total_price{
+        display: flex;
+        align-items: center;
+        .total_num{
+            font-size: 40rpx;
+            color: #e00;
+            margin-right: 10rpx;
+        }
+    }
+    .settlement{
+        padding: 10rpx 20rpx;
+        background-color: #e00;
+        color: #fff;
+    }
+}

@@ -1,2 +1,50 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 收货地址 -->
+<button type="primary" plain bindtap="handleChooseAddress" wx:if="{{!address}}">添加地址</button>
+<view class="address_container"  wx:else>
+    <view class="address_info">
+        <view class="people">收货人：{{address.userName}}</view>
+        <view class="tel">{{address.telNumber}}</view>
+    </view>
+    <view class="address">{{address.provinceName + address.cityName + address.cityName + address.detailInfo}}</view>
+</view>
+<!-- 购物车 -->
+<view class="shopCart">
+    <view class="title">购物车</view>
+    <block wx:if="{{cart.length}}">
+        <view class="shop" wx:for="{{cart}}" wx:key="goods_id">
+            <view class="choose">
+                <checkbox-group bindchange="handleItemChange" data-index="{{item.goods_id}}">
+                    <checkbox checked="{{item.checked}}"></checkbox>
+                </checkbox-group>
+            </view>
+            <view class="img">
+                <image class="" src="{{item.goods_small_logo}}" mode="widthFix"></image>
+            </view>
+            <view class="info">
+                <view class="info_text">{{item.goods_name}}</view>
+                <view class="price_wrap">
+                    <view class="price">￥{{item.goods_price}}</view>
+                    <view class="num_wrap">
+                        <view class="num_edit" bindtap="handleModifyNum" data-index="{{item.goods_id}}" data-id="-1">-</view>
+                        <view class="num">{{item.num}}</view>
+                        <view class="num_add" bindtap="handleModifyNum" data-index="{{item.goods_id}}" data-id="1">+</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <image class="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596126026403&di=6e3662e163ae9d5909233818b72724a4&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" mode="widthFix"></image>
+    </block>
+</view>
+<!-- 底部工具栏 -->
+<view class="bottom">
+    <checkbox-group bindchange="handleAllChange">
+        <checkbox checked="{{allChecked}}"></checkbox>全选
+    </checkbox-group>
+    <view class="total_price">合计：<view class="total_num">￥{{totalPrice}}</view></view>
+    <view class="settlement" bindtap="handlePay">结算({{totalNum}})</view>
+</view>
+  
+
+
